@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_basic_layout/screens/list_body.dart';
 void main() {
   runApp(const MainApp());
 }
@@ -38,6 +38,13 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ), 
+      body: ListView.builder(
+        itemCount: numbers.length,
+        itemBuilder: (BuildContext context, int index){
+          return numbers[index];
+        }
+
+      ),
       drawer: Drawer(
       child: ListView(
          children: const [
